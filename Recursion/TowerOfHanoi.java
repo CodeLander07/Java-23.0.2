@@ -8,6 +8,8 @@ public class TowerOfHanoi {
         TowerofHnaoi(src, aux, dest, n-1);// 1st faith (choti disk--> Extra tower )
 
         System.out.print((total-n +1) + " Move disk " + n + " from " + src + " to " + dest + "\n");
+
+        TowerofHnaoi(aux, dest,src,  n-1);//2nd faith (Extra tower --> destination tower)
     }
 
     public static void main (String[] args){
