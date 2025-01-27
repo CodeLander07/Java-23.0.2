@@ -54,6 +54,6 @@ public class margeSort {
     public static void main(String[] args){
         int arr [] ={2,1,4,3,6,5,8,7};
         MS(arr, 0, arr.length-1);
-        Printarr(arr);
+        Printarr(arr); 
     }
 }
