@@ -188,18 +188,88 @@ public class LinkedList {
             System.out.println("Value not found in the list");
         }
     }
+    public void deleteNthfromEnd(int n){
+        int sz =0;
+        Node temp = Head;
+        while(temp != null){
+            temp = temp.next; 
+            sz++;
+        }
+        if(n == sz){
+            Head= Head.next;
+            return; 
+        }
+        int i= 1;
+        int iToFind = sz-n;
+        Node prev = Head;
+        while(i < iToFind){
+            prev = prev.next; 
+            i++;
+        }
+        prev.next = prev.next.next; // Remove the nth node from the end
+        return;
+    }
+
+
+//check if linked list is palindrome or not
+public boolean isPalindrome(){
+if(Head == null || Head.next == null){
+    return true; 
+
+
+}
+
+Node midNode = findMid(Head); // Find the middle node
+
+Node prev = null;
+Node current = midNode;
+Node next ;
+
+while(current != null){
+    next = current.next; // Store the next node
+    current.next = prev; // Reverse the link
+    prev = current; // Move prev to current
+    current = next; // Move to the next node
+} 
+Node right = prev; // Right half of the list
+Node left = Head; // Left half of the list
+
+while(right != null){
+    if(left.data != right.data){
+        return false; 
+    }
+    left = left.next; // Move to the next node in the left half
+    right = right.next; // Move to the next node in the right half
+}
+return true; // If all nodes matched, it's a palindrome
+}
+
+public Node findMid(Node Head){
+    Node slow = Head;
+    Node fast = Head;
+
+    while(fast != null && fast.next != null){
+        slow = slow.next; 
+        fast = fast.next.next; 
+    }
+    return slow;
+}
+
+
     public static void main(String[] args) {
         LinkedList ll = new LinkedList();
 
-        ll.addFirst(10);
-        ll.addFirst(20);
-        ll.addFirst(30); 
-        ll.addLast(110);
+        ll.addFirst(1);
+        ll.addFirst(2);
+        ll.addFirst(2); 
+        ll.addFirst(1);
 
 
         ll.printList(); // Print the list
 
-        ll.recSearch(32); // Search for an element in the list
+    //   ll.deleteNthfromEnd(3);
+      System.out.println(ll.isPalindrome());
+      ll.printList(); // Search for an element in the list
         System.out.println("Size of the list: " + ll.size); // Print the size of the list
     }
 }
