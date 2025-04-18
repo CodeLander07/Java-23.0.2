@@ -29,16 +29,14 @@ public class LinkedList {
     }
 
     public void addLast(int data) {
-        // Step 1: Create a new node with given data
+       
         Node newNode = new Node(data);
         size++;
         if (Head == null) {
-            Head = Tail = newNode; // Corrected initialization
+            Head = Tail = newNode; 
             return;
         }
-        // Step 2: Tail next = new node
-        Tail.next = newNode; // linking tail to the new node
-        // Step 3: Tail = new node
+        Tail.next = newNode; 
         Tail = newNode;
     }
 
