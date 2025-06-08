@@ -2,10 +2,10 @@
 import java.util.Arrays;
 
 
-public class ARRAY_SEARCHES {
+public class array_search {
 
     public static int search(int numbers[], int key) {
-        for (int i = 0; i < numbers.length; i++) {  // Changed from <= to < for proper array bounds
+        for (int i = 0; i < numbers.length; i++) {  
             if (numbers[i] == key) {
                 return i;
             }
@@ -15,7 +15,7 @@ public class ARRAY_SEARCHES {
 
     public static int GetLargest(int numbers[]) {
         int largest = Integer.MIN_VALUE;
-        for (int i = 0; i < numbers.length; i++) {  // Changed from <= to < for proper array bounds
+        for (int i = 0; i < numbers.length; i++) {  
             if (largest < numbers[i]) {
                 largest = numbers[i];
             }
@@ -90,8 +90,5 @@ public class ARRAY_SEARCHES {
     
     }
 
-    private static void sort(int[] numbers) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'sort'");
-    }
+    
 }
