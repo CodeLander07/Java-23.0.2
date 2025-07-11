@@ -17,17 +17,16 @@ class Node {
 
 public class GfG {
     void levelOrderRec(Node root, int level, List<List<Integer>> res) {
-        // Base case: If node is null, return
         if (root == null) return;
 
-        // Add a new level to the result if needed
+        
         if (res.size() <= level)
             res.add(new ArrayList<>());
 
-        // Add current node's data to its corresponding level
+       
         res.get(level).add(root.data);
 
-        // Recur for left and right children
+        
         levelOrderRec(root.left, level + 1, res);
         levelOrderRec(root.right, level + 1, res);
     }
