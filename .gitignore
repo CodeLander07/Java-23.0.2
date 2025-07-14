@@ -1,2 +1,15 @@
-Recursion/tilingProblem.class
-solutions of problems/fizzbuzz.class
+# Ignore all compiled Java class files
+*.class
+*.jar
+
+# Ignore Java documentation
+*.javadoc
+
+# Ignore IDE files
+.vscode/
+.idea/
+*.iml
+
+# Ignore OS files
+.DS_Store
+Thumbs.db

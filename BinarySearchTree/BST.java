@@ -1,5 +1,6 @@
 package BinarySearchTree;
 
+
 public class BST {
     static class Node{
         int data;
@@ -11,32 +12,35 @@ public class BST {
         }
     }
 
-    public static void printBT(Node root){
-        if(root == null) return;
-        System.out.print(root.data + "->");
-        printBT(root.left);
-        printBT(root.right);
-    }
-    public static Node deleteLeafNode(Node root , int target){
-        if(root == null ) return null;
-        if(root.left == null && root.right == null){
-            if(root.data == target) return null;
-            else return root;
+    public static Node insert(Node root , int val){
+        if(root == null){
+            root = new Node(val);
+            return root;
         }
-        root.left = deleteLeafNode(root, target);
-        root.right = deleteLeafNode(root, target);
+        if(root.data > val){
+            root.left = insert(root.left , val);
+        }
+        else{
+            root.right = insert(root.right, val);
+        }
+        return root;
 
+    }
+    public static void inorder(Node root){
+        if(root == null) return;
+        inorder(root.left);
+        System.out.print(root.data + " ");
+        inorder(root.right);
+    }
+
+    public static Node findInorderSuccessor(Node root) {
+        while(root.left != null) {
+            root = root.left;
+        }
         return root;
     }
-    public static void main(String[] args){
-        Node root = new Node(1);
-        root.left = new Node(2);
-        root.right =new Node(3);
-        root.left.left = new Node(2);
-        root.left.right = new Node(8);
-        root.right.left = new Node(2);
-        root.right.right = new Node(4); 
 
-        printBT(root);
-    }
+    
+   
+   
 }

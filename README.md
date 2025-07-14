@@ -32,11 +32,11 @@ Welcome to the **Java Data Structures and Algorithms (DSA)** repository! This co
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/unstopablesid/Java-DSA.git
+   git clone https://github.com/CodeLander07/Java-23.0.2
    ```
 2. Navigate into the project directory:
    ```bash
-   cd Java-DSA
+   cd Java-23.0.2
    ```
 3. Explore the directories for different data structures and algorithms.
 
