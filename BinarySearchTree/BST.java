@@ -27,10 +27,13 @@ public class BST {
 
     }
     public static void inorder(Node root){
-        if(root == null) return;
+        if(root != null){
         inorder(root.left);
         System.out.print(root.data + " ");
         inorder(root.right);
+        }
+        
+        
     }
 
     public static Node findInorderSuccessor(Node root) {
