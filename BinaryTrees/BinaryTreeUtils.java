@@ -1,4 +1,4 @@
-package BinaryTrees;
+// Removed package declaration to match default package
 
 public class BinaryTreeUtils {
 
