@@ -47,17 +47,3 @@ Welcome to the **Java Data Structures and Algorithms (DSA)** repository! This co
 - **Modular Structure:** Each data structure and algorithm is separated by folders for easy navigation.
 - **Interview Preparation:** Great resource for anyone preparing for coding interviews or brushing up on DSA fundamentals.
 
-## 🧑‍💻 Contributions
-
-Contributions are welcome! If you would like to contribute to this repository, feel free to open a pull request or suggest improvements in the issues section.
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
-
-**Happy Coding!**
-```
-
-This format makes it easy to read and gives a professional feel to your repository's README file. Let me know if you'd like to tweak any part!
